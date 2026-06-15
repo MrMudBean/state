@@ -1,5 +1,5 @@
 /**
- * @module @qqi/State/types
+ * @module @vvi/state/types
  * @file types.ts
  * @description _
  * @author MrMudBean <Mr.MudBean@outlook.com>
@@ -7,7 +7,7 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 2026-01-26 19:56
  * @version 0.0.0
- * @lastModified 2026-01-27 11:41
+ * @lastModified 2026-06-15 21:23
  */
 
 import { type StateManager } from './index';

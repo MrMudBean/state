@@ -1,5 +1,5 @@
 /**
- * @module @qqi/state/class-time-travel
+ * @module @vvi/state/class-time-travel
  * @file class-time-travel.ts
  * @description 时间旅行模块
  * @author MrMudBean <Mr.MudBean@outlook.com>
@@ -7,18 +7,18 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 2026-01-26 19:59
  * @version 0.0.0
- * @lastModified 2026-06-12 15:33
+ * @lastModified 2026-06-15 21:24
  */
 
 import type { StateManager } from './index';
 
 /**
- * ## 时间旅行模块
+ * # 时间旅行模块
  *
  * @example
  *
  * ```ts
- * import { StateManager, TimeTravel } from '@qqi/state';
+ * import { StateManager, TimeTravel } from '@vvi/state';
  *
  * const store = new StateManager(...);
  *
@@ -50,7 +50,6 @@ export class TimeTravel<State extends object> {
   }
 
   /**
-   *
    * @param state
    */
   saveState(state: State) {

@@ -1,13 +1,13 @@
-# @mudbean/state
+# @vvi/state
 
-[![version](<https://img.shields.io/npm/v/@mudbean/state.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/@mudbean/state) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/MrMudBean/state/issues)
+[![version](<https://img.shields.io/npm/v/@vvi/state.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/@vvi/state) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/MrMudBean/state/issues)
 
 简易的状态管理。
 
 ## 安装
 
 ```bash
-npm install --save @mudbean/state
+npm install --save @vvi/state
 ```
 
 ## 使用
@@ -15,7 +15,7 @@ npm install --save @mudbean/state
 通过 `StateManager` 构建简易的数仓，然后可订阅。在订阅后通过 `store.dispatch()` 派发消息
 
 ```ts
-import { StateManager } from '@mudbean/state';
+import { StateManager } from '@vvi/state';
 
 interface DataType {
   counting: number;
@@ -69,7 +69,7 @@ unsubscribe();
 默认不携带日志，可通过日志插件 `loggerMiddleware` 开启
 
 ```ts
-import { StateManager, loggerMiddleware } from '@mudbean/state';
+import { StateManager, loggerMiddleware } from '@vvi/state';
 
 const state = new StateManager(
   (state, action) => {
@@ -87,7 +87,7 @@ const state = new StateManager(
 默认不携带，可用于开发测试：
 
 ```ts
-import { StateManager, TimeTravel } from '@mudbean/state';
+import { StateManager, TimeTravel } from '@vvi/state';
 
 const state = new StateManager(() => {}, {});
 
@@ -99,7 +99,7 @@ const timeTravel = new TimeTravel(state);
 提供了 `beforeDispatch` 和 `afterDispatch` 钩子。即便是数据未发生更新（消息未下发），钩子也将照常运行。
 
 ```ts
-import { StateManager } from '@mudbean/state';
+import { StateManager } from '@vvi/state';
 
 interface DataType {
   counting: number;
@@ -146,7 +146,7 @@ const store = new StateManager<DataType>(
 参考 `loggerMiddleware` 源码
 
 ```ts
-import type { Middleware } from '@mudbean/state';
+import type { Middleware } from '@vvi/state';
 
 export const loggerMiddleware: Middleware = manager => next => action => {
   console.groupCollapsed('触发： ', String(action.type));
@@ -161,7 +161,7 @@ export const loggerMiddleware: Middleware = manager => next => action => {
 当然，如果你愿意，你可以：
 
 ```ts
-import type { Middleware } from '@mudbean/state';
+import type { Middleware } from '@vvi/state';
 
 export const justPlayingMiddleware: Middleware = manager => next => action => {
   next(action);
@@ -177,7 +177,7 @@ export const justPlayingMiddleware: Middleware = manager => next => action => {
 如果在某个部分，你想拦截本地触发，你可以：
 
 ```ts
-import type { Middleware } from '@mudbean/state';
+import type { Middleware } from '@vvi/state';
 
 export const interceptMiddleware: Middleware = manager => next => action => {
   if (action.type !== 'name') next(action);

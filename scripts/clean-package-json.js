@@ -111,7 +111,7 @@ packageJson = {
     ...exportsList,
   },
 
-  keywords: ['state', 'mudbean', '数据仓'],
+  keywords: ['state', 'mudbean', '数据仓', 'vvi'],
   homepage: 'https://npm.lmssee.com/state',
   dependencies,
   bugs: {

@@ -1,5 +1,5 @@
 /**
- * @module @qqi/reducer/middle-ware-log
+ * @module @vvi/reducer/middle-ware-log
  * @file middle-ware-log.ts
  * @description 日志中间件
  * @author MrMudBean <Mr.MudBean@outlook.com>
@@ -7,7 +7,7 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 2026-01-26 20:30
  * @version 0.0.0
- * @lastModified 2026-06-12 15:33
+ * @lastModified 2026-06-15 21:23
  */
 
 import type { Middleware } from './types';

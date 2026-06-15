@@ -1,12 +1,12 @@
 /**
- * @module @qqi/reducer/index
+ * @module @vvi/reducer/index
  * @file index.ts
  * @author MrMudBean <Mr.MudBean@outlook.com>
  * @license MIT
  * @copyright 2026 ©️ MrMudBean
  * @since 2026-01-26 19:56
  * @version 0.0.0
- * @lastModified 2026-06-12 13:27
+ * @lastModified 2026-06-15 21:23
  */
 import { TimeTravel } from './class-time-travel';
 
@@ -25,7 +25,7 @@ import type {
  * @example
  *
  * ```ts
- * import { StateManager } from '@qqi/state';
+ * import { StateManager } from '@vvi/state';
  *
  * interface Data {
  *   toy: number;
